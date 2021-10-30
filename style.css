@@ -1,0 +1,809 @@
+/* @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@500;700&family=Montserrat:wght@700;900&family=Poppins:wght@600&family=Roboto+Mono:wght@300;500&display=swap'); */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Montserrat:wght@700;900&family=Playfair+Display:wght@700;900&family=Roboto+Mono:wght@300;500&display=swap');
+
+/*Global Varible for setting the style */
+:root{
+    --primary-color:rgb(80, 80, 80);
+    --secondary-black:rgb(0, 0, 0);
+    --secondary-gray:rgb(78, 76, 76);
+    --body-bg: rgb(246, 246, 246);
+    /* rgb(233, 245, 255); */
+}
+
+/* Styling for global */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-family:'Roboto Mono',sans-serif;
+    font-size: 10px;
+    font-weight:400;
+}
+
+body{
+    background-color: var(--body-bg);
+}
+
+
+
+img{
+    width: 100%;
+    height: 100%;
+}
+
+a{
+    color:black;
+    text-decoration: none;
+}
+
+p{
+    margin-top: 3rem;
+    /* max-width: 500px; */
+    font-size: 1.5rem;
+    color: var(--secondary-black);
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.PrimButton{
+    display: inline-block;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    padding: 0.8em 1.6em;
+    border-radius: 50px;
+}
+
+.PrimButtonOutline{
+    display: inline-block;
+    background-color: white;
+    color:var(--primary-color);
+    font-size: 1.5rem;
+    padding: 0.8em 1.6em;
+    border-radius: 50px;
+}
+
+.buttons{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 3rem;
+    gap: 2rem;
+}
+
+.buttons svg{
+    width: 20px;
+    color: var(--primary-color);
+}
+
+@keyframes come{
+    0%{
+        top:-400px;
+    }
+    100%{
+        top:0;
+    }
+}
+
+@keyframes show{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity:1;
+    }
+}
+
+/* End of Styling for Global */
+
+/*hero section  */
+#hero{
+    /* height: 100vh; */
+    width: 100%;
+    padding-top: 20rem;
+}
+
+.container{
+    width: 90%;
+    margin: 0 auto;
+    max-width: 1000px;
+}
+
+#hero .container{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero .container .left{
+    flex:5;
+}
+#hero .container .right{
+    flex:5;
+}
+
+#hero .left .heading{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+    /* padding-top: 50%vh; */
+}
+
+#hero .left .heading .wrapper{
+    overflow: hidden;
+}
+
+#hero .left .heading .wrapper span{
+    position: relative;
+    top: -400px;
+    animation: come 1s ease-in-out forwards;
+}
+
+#hero .left .subheading{
+    font-size: 2rem;
+    font-weight:500;
+    color: var(--primary-color);
+    margin-top: 3rem;
+    max-width: 500px;
+    opacity: 0; 
+    animation: show 0.5s ease-in forwards;
+    animation-delay: 1s;
+}
+
+#hero .left .description{
+    margin-top: 3rem;
+    max-width: 500px;
+    font-size: 1.5rem;
+    color: var(--secondary-black);
+    opacity: 0; 
+    animation: show 0.5s ease-in forwards;
+    animation-delay: 1s;
+}
+
+#hero .left .buttons{
+    opacity: 0; 
+    animation: show 0.5s ease-in forwards;
+    animation-delay: 1s;
+}
+
+#hero .right{
+    text-align: right;
+}
+
+#hero .right .img{
+    width: 120%;
+    height: 120%;
+    border-radius: 50%;
+    max-width: 350px;
+    max-height: 350px;
+    object-fit: cover;
+}
+
+/* on smaller screen */
+@media screen and (max-width:768px) {
+    html{
+        font-size: 8px;
+    }
+
+    #hero .container{
+        flex-direction: column-reverse;
+    }
+
+    #hero .container .right{
+        text-align: center;
+    }
+
+    #hero .container .left{
+        text-align: center;
+        height: fit-content;
+    }
+
+    #hero .container .left .heading .wrapper{
+        text-align: center;
+        font-size: 4rem;
+    }
+
+    #hero .left .buttons{
+        justify-content: center;
+    }
+
+    #hero .right .img{
+        width: 200px;
+        height: 200px;
+        padding: 10px;
+    }
+    
+}
+
+/* End of Hero Section */
+
+
+/* Skill Section */
+#skills{
+    width: 100%;
+    padding-top: 20rem;
+}
+
+#skills .container{
+    margin-bottom: 2rem;
+}
+
+#skills .Sectionheading{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+}
+
+#skills .Sectionheading .wrapper{
+    text-align: center;
+}
+
+#skills .container .skillsdescription{
+    text-align: center;
+    align-items: center;
+    font-size: 2rem;
+    color: var(--primary-color);
+}
+
+#skills .containerskills{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap:0.8rem;
+    margin-top: 3rem;
+}
+
+#skills .skill{
+    font-size: 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 1.5rem;
+    margin-top: 2rem;
+    padding: 0.8em 1.6em;
+    border-radius: 50px;
+    max-width: 1000px;
+}
+
+/* on smaller screen */
+@media screen and (max-width:768px) {
+
+    #skills .container .Sectionheading .wrapper{
+        text-align: center;
+        justify-content: center;
+        font-size: 4rem;
+    }
+    
+    #skills .AllSkills{
+        justify-content: center;
+        align-items: center;
+    }
+    
+    #skills .containerskills{
+        display:flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+    }
+        
+    }
+
+/* end of skill section */
+
+
+
+/* Projects Section */
+
+#projects{
+    padding: 20rem 0;
+}
+
+#projects .container .Sectionheading{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+}
+
+#projects .container .Sectionheading .wrapper{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+    text-align: center;
+    justify-content: center;
+}
+
+#projects .container .projectsdescription{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: -5rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}   
+
+
+#projects .container .Sectionheading .wrapper{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+    text-align: center;
+    justify-content: center;
+}
+
+#projects .item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 15rem;
+}
+
+#projects .all-items{
+    margin-top: 10rem;
+}
+
+
+#projects .item:nth-child(even){
+    flex-direction: column;
+}
+
+#projects .item .left{
+    flex: 1;
+}
+
+#projects .item .right{
+    flex: 1;
+    /* margin-left: -250px; */
+    background-color: white;
+    padding: 5rem 5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgb(156, 156, 156);
+    z-index: 2;
+}
+
+#projects .item:nth-child(even) .right{
+    margin-left: 0px;
+}
+/* #projects .item:nth-child(even) .left{
+    /* margin-left: -250px; */
+
+
+#projects .item .left .image{
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgb(156,156,156);
+    position: relative;
+}
+
+#projects .item .left .image::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#projects .item .left .image img{
+    object-fit: cover;
+    max-width: 1000px;
+    padding: 10px;
+}
+
+#projects .item:hover .left .image img{
+    transform: scale(1.1);
+    z-index: 1;
+    transition: .3s ease transform;
+} 
+
+#projects .item .right .project-title{
+    font-size: 2.5rem;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 1rem;
+}
+
+#projects .item .right .project-subtitle{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+#projects .item .right .project-description{
+    font-family: 1rem;
+    color: var(--secondary-gray);
+    margin-bottom: 3rem;
+}
+
+#projects .item .right .buttons .external{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(221, 221, 221);
+}
+
+
+
+#projects .item .right .buttons .external svg{
+    width: 17px;
+}
+
+
+@media screen and (max-width:768px) {
+
+    #projects .item{
+        flex-direction: column;
+    }
+
+    #projects .item .left{
+        width: 100%;
+    }
+
+    #projects .item .right{
+        width: 90%;
+        margin-left: 0;
+        margin-top: -50px;
+    }
+    
+    #projects .item:nth-child(even){
+        flex-direction: column;
+    }
+
+    #projects .item:nth-child(even) .left{
+        margin-left: 0;
+    }
+
+    #projects .container .Sectionheading .wrapper{
+        text-align: center;
+        justify-content: center;
+        font-size: 4rem;
+    }  
+
+
+}
+
+
+@media screen and (max-width: 450px){
+    #projects .item .buttons{
+        flex-direction: column-reverse;
+    }
+    #projects .item .buttons a{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+
+/* end of Projects section */
+
+
+
+/* certificates Section */
+
+#certificates{
+    /* padding: 20rem 0; */
+    margin-top: -100px;
+}
+
+
+#certificates .container .Sectionheading{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+}
+
+#certificates .container .Sectionheading .wrapper{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+    text-align: center;
+    justify-content: center;
+}
+
+#certificates .container .certificatesdescription{
+    justify-content: center;
+    text-align: center;
+    margin-bottom: -5rem;
+    font-size: 2rem;
+    color: var(--primary-color);
+}   
+
+
+#certificates .container .Sectionheading .wrapper{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+    text-align: center;
+    justify-content: center;
+}
+
+#certificates .item{
+    display: flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    margin-bottom: 15rem;
+}
+
+#certificates .all-items{
+    margin-top: 10rem;
+}
+
+#certificates .item .left{
+    flex: 1;
+}
+
+#certificates .item .right{
+    flex: 1;
+    background-color: white;
+    padding: 5rem 5rem;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgb(156, 156, 156);
+    z-index: 2;
+    margin-top: -100px;
+    text-align: center;
+}
+
+#certificates .item:nth-child(even) .right{
+    margin-left: 0px;
+}
+
+#certificates .item .left .image{
+    height: 500px;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0px 0px 20px rgb(156,156,156);
+    position: relative;
+}
+
+#certificates .item .left .image::after{
+    position: absolute;
+    content: '';
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+}
+
+#certificates .item .left .image img{
+    object-fit: cover;
+    max-width: 1000px;
+    padding: 10px;
+}
+
+#certificates .item:hover .left .image img{
+    transform: scale(1.1);
+    z-index: 1;
+    transition: .3s ease transform;
+} 
+
+#certificates .item .right .certificates-title{
+    font-size: 2.5rem;
+    font-family: 'DM Sans', sans-serif;
+    margin-bottom: 1rem;
+}
+
+#certificates .item .right .certificates-subtitle{
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+#certificates .item{
+    align-items: center;
+}
+#certificates .item .right .buttons {
+    justify-content: center;
+}
+#certificates .item .right .buttons .external{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgb(221, 221, 221);
+}
+
+
+#certificates .item .right .buttons .external svg{
+    width: 17px;
+}
+
+
+@media screen and (max-width:768px) {
+
+    #certificates .item{
+        flex-direction: column;
+    }
+
+    #certificates .item .left{
+        width: 100%;
+    }
+
+    #certificates .item .right{
+        width: 90%;
+        margin-left: 0;
+        margin-top: -50px;
+    }
+    
+    #certificates .item:nth-child(even){
+        flex-direction: column;
+    }
+
+    #certificates .item:nth-child(even) .left{
+        margin-left: 0;
+    }
+
+    #certificates .container .Sectionheading .wrapper{
+        text-align: center;
+        justify-content: center;
+        font-size: 4rem;
+    }  
+
+
+}
+
+
+@media screen and (max-width: 450px){
+    #certificates .item .buttons{
+        flex-direction: column-reverse;
+    }
+    #certificates .item .buttons a{
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* end of certificates section */
+
+#experiences{
+    /* padding: 20rem 0; */
+    margin-top: 100px;
+}
+
+#experiences .container .Sectionheading{
+    max-width: 1000px;
+}
+
+#experiences .container .Sectionheading .wrapper{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+    text-align: center;
+    justify-content: center;
+}
+
+#experiences .container .experience-title{
+    font-size: 2rem;
+    font-weight:500;
+    font-family: 'DM Sans', sans-serif;
+    margin-top: 5rem;
+}
+
+
+#experiences .container .experience-subtitle{
+    margin-bottom: 5rem;
+}
+
+
+#experiences .container .allexperiences{
+    display: flex;
+    flex: row;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+@media screen and (max-width:768px) {
+
+    #experiences .container .Sectionheading .wrapper{
+        text-align: center;
+        justify-content: center;
+        font-size: 4rem;
+    }  
+
+    #experiences .container .allexperiences{
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    #experiences .container .groupexperiences{
+        margin-bottom: -70px;
+    }
+
+    #experiences .container .experience{
+        text-align: center;
+    }
+
+}
+
+#footer{
+    margin-top: 150px;
+    background-color: black;
+    padding: 100px;
+}
+
+
+
+
+
+#footer .columnheading{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+}
+
+#footer .columnheading{
+    text-align: left;
+    color:white;
+}
+
+#footer .container{
+    display: flex;
+    justify-content: space-around;
+}
+
+#footer .container a{
+    text-align: center;
+    color:white;
+}
+
+#footer .container .col ul{
+    list-style: none;
+}
+
+#footer .container .col ul li{
+    border-radius: 4px;
+}
+
+#footer .container .col ul li a{
+    font-size: 1.8rem;
+}
+
+
+
+@media screen and (max-width:768px) {
+
+
+    #footer {
+        align-items: center;
+    }  
+
+    #footer .container .Sectionheading .wrapper{
+        text-align: center;
+        font-size: 4rem;
+    }  
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
