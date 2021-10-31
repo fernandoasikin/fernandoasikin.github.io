@@ -29,7 +29,6 @@ body{
 }
 
 
-
 img{
     width: 100%;
     height: 100%;
@@ -105,7 +104,215 @@ section{
 
 /* End of Styling for Global */
 
-/*hero section  */
+
+/* scroll to top  */
+.scroll-top{
+    z-index: 100;
+    height: 60px;
+    Width: 60px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    cursor:pointer;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    background-color: white;
+    transform: scale(0.9);
+    transition: 0.3s ease ease-in-out transform;
+}
+
+.scroll-top svg{
+    width:60%;
+    color: black;
+    pointer-events: none;
+}
+
+.scroll-top svg{
+    width:60%;
+    color: black;
+    pointer-events: none;
+}
+
+.scroll-top:hover {
+	transform: scale(1);
+}
+
+
+
+
+/* end scroll to top  */
+
+
+
+/* Making Nagivation Section */
+#nagivation{
+    position: fixed;
+    top: 20px;
+    right: 50px;
+    height: auto;
+    z-index: 100;
+}
+
+#nagivation .iconnagivation{
+    width: 50px;
+    height: 50px;
+    margin-right: 0;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+}
+
+#nagivation .iconnagivation svg{
+    color: white;
+    width: 60%;
+}
+
+#contentnagivation{
+    position: fixed;
+    width: 80%;
+    height: 100%;
+    max-width: 800px;
+    background-color: var(--secondary-black);
+    right:0;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    z-index: 100;
+    /* outsite of window */
+    transform: translateX(110%); 
+    transition: 0.3s ease transform;
+}
+
+#contentnagivation.show {
+    transform: translateX(0);
+}
+
+
+#contentnagivation .wrapper{
+    width: 70%;
+    position: relative;
+}
+
+#contentnagivation .wrapper h2{
+    font-size: 6rem;
+    font-weight:700;
+    font-family: 'DM Sans';
+    text-align: left;
+    justify-content: center;
+    margin-bottom: 10rem;
+}
+
+#contentnagivation .wrapper ul{
+    list-style: none;
+    text-align: left;
+}
+
+#contentnagivation .wrapper ul li{
+    list-style: none;
+    text-align: left;
+    padding: 5px;
+}
+
+#contentnagivation .wrapper ul li a{ 
+    color: white;
+    width: 100%;
+    font-size: 3rem;
+    font-family: 'DM Sans', sans-serif;
+}
+
+#contentnagivation .wrapper ul li:hover a{
+    color: rgb(172, 152, 126);
+}
+
+#contentnagivation .wrapper ul li:hover{
+    background-color: white;
+    border-radius: 10px;
+}
+
+#contentnagivation .closebutton{
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    color: white;
+    background-color: rgb(172, 152, 126);
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 15%;
+    cursor: pointer;
+    transition: 0.3 ease background-color;
+}
+
+#contentnagivation .closebutton svg{
+    width: 60%;
+}
+
+#contentnagivation .closebutton:hover{
+    background-color: white;
+    color: rgb(172, 152, 126);
+}
+
+#contentnagivation .Sectionheading{
+    text-align: left;
+}
+
+/* on smaller screen */
+@media screen and (max-width:768px) {
+    #nagivation{
+        right: 10px;
+        top: 10px;
+    }
+
+    #contentnagivation .wrapper h2{
+        text-align: right;
+    }
+    
+    #contentnagivation .wrapper ul{
+        text-align: right;
+    }
+    
+    #contentnagivation .wrapper ul li{
+        text-align: right;
+    }
+
+    #contentnagivation .wrapper ul li a{
+        font-size: 2.5rem;
+        padding: 0px;
+    }
+
+    #contentnagivation .wrapper{
+        width: 80%;
+        padding-right: 20px;
+    }
+
+    #contentnagivation .wrapper ul li{
+        gap: 10px;
+        padding: 5px;
+
+    }
+
+    #contentnagivation .wrapper ul li:hover{
+        background-color: white;
+        border-radius: 10px;
+    }
+       
+}
+
+/* End Nagivation Section */
+
+
+
+
+/* Making Hero Section */
 #hero{
     /* height: 100vh; */
     width: 100%;
@@ -223,10 +430,10 @@ section{
     
 }
 
-/* End of Hero Section */
+/* End Hero Section */
 
 
-/* Skill Section */
+/* Making Skills Section */
 #skills{
     width: 100%;
     padding-top: 20rem;
@@ -297,15 +504,15 @@ section{
         
     }
 
-/* end of skill section */
+/* End Skills Section */
 
 
 
-/* Projects Section */
+/* Making Projects Section */
 
 #projects{
     padding: 20rem 0;
-    margin-bottom: 100px;
+    /* margin-bottom: 100px; */
 }
 
 #projects .container .Sectionheading{
@@ -432,7 +639,6 @@ section{
 }
 
 
-
 #projects .item .right .buttons .external svg{
     width: 17px;
 }
@@ -468,7 +674,6 @@ section{
         font-size: 4rem;
     }  
 
-
 }
 
 
@@ -482,15 +687,13 @@ section{
     }
 }
 
+/* End Projects Section */
 
 
-/* end of Projects section */
-
-
-
-/* certificates Section */
+/* Making Certicates Section */
 
 #certificates{
+    padding: 10rem 0;
     margin-top: -300px;
 } 
 
@@ -649,7 +852,6 @@ section{
         font-size: 4rem;
     }  
 
-
 }
 
 
@@ -663,11 +865,13 @@ section{
     }
 }
 
-/* end of certificates section */
+/* End Certicates Section */
 
+
+/* Making Experiences Section */
 #experiences{
-    /* padding: 20rem 0; */
-    margin-top: 100px;
+    padding: 20rem 0;
+    margin-top: -200px;
 }
 
 #experiences .container .Sectionheading{
@@ -724,12 +928,16 @@ section{
     }
 
 }
+/* End Experiences Section */
 
+
+/* Making Footer Section */
 #footer{
-    margin-top: 170px;
+    /* margin-top: 170px; */
     background-color: black;
     padding: 15rem 0 15rem 0;
     color: white;
+    padding: 10rem 0;
 }
 
 #footer footer{
@@ -809,8 +1017,10 @@ section{
     }
 }
 
+/* End Footer Section */
 
-/* Section Copyright */
+
+/* Making Copyright Section */
 
 #copyright{
     background-color: white;
@@ -826,9 +1036,29 @@ section{
 
 }
 
+/* End Copyright Section */
 
 
+/* Making Error Section */
 
+#cases-links{
+    padding: 5rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#cases-links h2{
+    font-size: 5rem;
+}
+
+#cases-links h2:hover{
+    color: rgb(172, 152, 126);
+}
+
+/* End Error Section */
 
 
 
