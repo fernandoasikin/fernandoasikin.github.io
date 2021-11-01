@@ -129,15 +129,16 @@ section{
     pointer-events: none;
 }
 
-.scroll-top svg{
-    width:60%;
-    color: black;
-    pointer-events: none;
+.scroll-top:hover {
+	transform: scale(1.2);
+    background-color:black;
 }
 
-.scroll-top:hover {
-	transform: scale(1);
+.scroll-top:hover svg {
+	/* transform: scale(1); */
+    color:white;
 }
+
 
 
 
@@ -1061,8 +1062,17 @@ section{
 /* End Error Section */
 
 
+/* custom scrollbar  */
+::-webkit-scrollbar{
+    width: 6px; 
+    background:rgb(255, 255, 255);
+}
 
-
+::-webkit-scrollbar-thumb{
+    background: rgb(119, 119, 119);
+    border-radius: 50px;
+}
+/* end custom scrollbar  */
 
 
 

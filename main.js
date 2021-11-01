@@ -9,7 +9,7 @@ const scrollButton = document.querySelector('.scroll-top')
 
 if(scrollButton){
     window.addEventListener('scroll', ()=>{
-        if(pageYOffset > (window.innerHeight *1.2)){
+        if(pageYOffset > (window.innerHeight * 1.2)){
             scrollButton.style.display = 'flex';
         }
         else{
@@ -17,7 +17,7 @@ if(scrollButton){
         }
     })
     scrollButton.addEventListener('click', ()=>{
-        window.scrollTo(0,0)
+        window.scrollTo({top: 0, behavior: 'smooth'});
     })
 }
 
