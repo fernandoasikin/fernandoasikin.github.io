@@ -1033,8 +1033,9 @@ section{
 
 #copyright p{
     color: black;
-    font-size: 1rem;
+    font-size: 1.4rem;
     text-align: center;
+    align-items: center;
 
 }
 
