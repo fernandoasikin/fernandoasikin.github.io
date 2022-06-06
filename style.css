@@ -789,9 +789,9 @@ section{
 }
 
 #certificates .item:hover .left .image img{
-    transform: scale(1.1);
+    transform: scale(1.02);
     z-index: 1;
-    transition: .3s ease transform;
+    transition: 1.3s ease transform;
 } 
 
 #certificates .item .right .certificates-title{
@@ -1079,6 +1079,9 @@ section{
 
 * {box-sizing:border-box}
 
+
+/* bagiancontainer 1  ///////////////// */
+
 /* Slideshow container */
 .slideshow-container {
   max-width: 1000px;
@@ -1175,6 +1178,199 @@ section{
 }
 
 
+/* bagiancontainer 2  ///////////////// */
+
+/* Slideshow container */
+.slideshow-container2 {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Make the images invisible by default */
+  .Containers2 {
+    display: none;
+  }
+  
+  /* forward & Back buttons */
+  .Back2, .forward2 {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    margin-top: -23px;
+    padding: 17px;
+    color: rgb(172, 152, 126);
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+  }
+  
+  /* Place the "forward button" to the right */
+  .forward2 {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  /*when the user hovers,add a black background with some little opacity */
+  .Back2:hover, .forward2:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption Info */
+  .Info2 {
+    color: #e3e3e3;
+    background-color: rgb(78, 76, 76);
+    font-size: 16px;
+    padding: 10px 14px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Worknumbering (1/3 etc) */
+  .MessageInfo2 {
+    color: rgb(78, 76, 76);
+    background-color: #e3e3e3;
+    font-size: 14px;
+    padding: 10px 14px;
+    position: static;
+    top: 0;
+  }
+  
+  /* The circles or bullets and indicators */
+  .dots2 {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+    background-color: rgb(172, 152, 126);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+  }
+  
+  .enable, .dots2:hover {
+    background-color: #717161;
+  }
+  
+  /* Faint animation */
+  .fade2 {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+  }
+  
+  @-webkit-keyframes fade2 {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+  
+  @keyframes fade2 {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+
+/* bagiancontainer 3  ///////////////// */
+
+/* Slideshow container */
+.slideshow-container3 {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Make the images invisible by default */
+  .Containers3 {
+    display: none;
+  }
+  
+  /* forward & Back buttons */
+  .Back3, .forward3 {
+    cursor: pointer;
+    position: absolute;
+    top: 48%;
+    width: auto;
+    margin-top: -23px;
+    padding: 17px;
+    color: rgb(172, 152, 126);
+    font-weight: bold;
+    font-size: 19px;
+    transition: 0.4s ease;
+    border-radius: 0 5px 5px 0;
+    user-select: none;
+  }
+  
+  /* Place the "forward button" to the right */
+  .forward3 {
+    right: 0;
+    border-radius: 4px 0 0 4px;
+  }
+  
+  /*when the user hovers,add a black background with some little opacity */
+  .Back3:hover, .forward3:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption Info */
+  .Info3 {
+    color: #e3e3e3;
+    background-color: rgb(78, 76, 76);
+    font-size: 16px;
+    padding: 10px 14px;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Worknumbering (1/3 etc) */
+  .MessageInfo3 {
+    color: rgb(78, 76, 76);
+    background-color: #e3e3e3;
+    font-size: 14px;
+    padding: 10px 14px;
+    position: static;
+    top: 0;
+  }
+  
+  /* The circles or bullets and indicators */
+  .dots3 {
+    cursor: pointer;
+    height: 16px;
+    width: 16px;
+    margin: 0 3px;
+    background-color: rgb(172, 152, 126);
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.5s ease;
+  }
+  
+  .enable, .dots3:hover {
+    background-color: #717161;
+  }
+  
+  /* Faint animation */
+  .fade3 {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.4s;
+    animation-name: fade;
+    animation-duration: 1.4s;
+  }
+  
+  @-webkit-keyframes fade3 {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
+  
+  @keyframes fade3 {
+    from {opacity: .5}
+    to {opacity: 2}
+  }
 
 
 
