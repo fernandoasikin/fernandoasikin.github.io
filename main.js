@@ -161,3 +161,31 @@ function SlideShow4(p) {
   circles4[slidePosition4-1].className += " enable";
 } 
 
+var slidePosition5 = 1;
+SlideShow5(slidePosition5);
+
+// forward/Back controls
+function plusSlides5(p) {
+  SlideShow5(slidePosition5 += p);
+}
+
+//  images controls
+function currentSlide5(p) {
+  SlideShow5(slidePosition5 = p);
+}
+
+function SlideShow5(p) {
+  var k;
+  var slides5 = document.getElementsByClassName("Containers5");
+  var circles5 = document.getElementsByClassName("dots5");
+  if (p > slides5.length) {slidePosition5 = 1}
+  if (p < 1) {slidePosition5 = slides5.length}
+  for (k = 0; k < slides5.length; k++) {
+      slides5[k].style.display = "none";
+  }
+  for (k = 0; k < circles5.length; k++) {
+      circles5[k].className = circles5[k].className.replace(" enable", "");
+  }
+  slides5[slidePosition5-1].style.display = "block";
+  circles5[slidePosition5-1].className += " enable";
+} 
