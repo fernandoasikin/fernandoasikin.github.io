@@ -327,6 +327,7 @@ section{
     max-width: 1000px;
 }
 
+
 #hero .container{
     display:flex;
     align-items: center;
@@ -396,6 +397,18 @@ section{
     object-fit: cover;
 }
 
+#hero .left .buttonslink {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    opacity: 0; 
+    animation: show 0.5s ease-in forwards;
+    animation-delay: 1s;
+    margin-top: 3rem;
+    gap: 8px;
+    display: flex;
+    justify-content: flex-start;
+}
+
 /* on smaller screen */
 @media screen and (max-width:768px) {
     html{
@@ -420,8 +433,9 @@ section{
         font-size: 4rem;
     }
 
-    #hero .left .buttons{
+    #hero .left .buttonslink{
         justify-content: center;
+        padding: 10px;
     }
 
     #hero .right .img{
@@ -433,7 +447,6 @@ section{
 }
 
 /* End Hero Section */
-
 
 /* Making Skills Section */
 #skills{
@@ -1589,4 +1602,5 @@ section{
     from {opacity: .5}
     to {opacity: 2}
   }
+
 
